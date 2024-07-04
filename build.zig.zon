@@ -1,0 +1,13 @@
+.{
+  .name = "freetype",
+  .version = "2.0.9",
+  .dependencies = .{},
+  .paths = .{
+    "build.zig",
+    "build.zig.zon",
+    "src",
+    "builds",
+    "include",
+    "README"
+  }
+}
