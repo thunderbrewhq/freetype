@@ -22,7 +22,9 @@ pub fn build(b: *std.Build) void {
   freetype.defineCMacro("FT2_BUILD_LIBRARY", "1");
 
   const freetype_compiler_flags = [_][]const u8 {
-    "-std=c11"
+    "-std=c11",
+    // Disable UBsan alignment checks
+    "-fno-sanitize=alignment"
   };
 
   const freetype_base_sources = [_][]const u8 {
