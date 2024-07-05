@@ -23,8 +23,8 @@ pub fn build(b: *std.Build) void {
 
   const freetype_compiler_flags = [_][]const u8 {
     "-std=c11",
-    // Disable UBsan alignment checks
-    "-fno-sanitize=alignment"
+    // Disable UBsan 
+    "-fno-sanitize=undefined"
   };
 
   const freetype_base_sources = [_][]const u8 {
